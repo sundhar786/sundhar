@@ -1,0 +1,23 @@
+<!-- templates/student_app/add_student.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Student</title>
+</head>
+<body>
+    <h2>Add Student</h2>
+    <form action="{% url 'submit' %}" method="POST">
+        {% csrf_token %}
+        <label>Name:</label><br>
+        <input type="text" name="name" required><br><br>
+
+        <label>Age:</label><br>
+        <input type="number" name="age" required><br><br>
+
+        <label>Marks:</label><br>
+        <input type="number" name="marks" required><br><br>
+
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
